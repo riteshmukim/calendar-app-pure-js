@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link
+    href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAD/xjgAAAAAAN6sMQDJmygA////AEVFRQCUdisAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARERERERERERVVVVVVVVVVFRERERERERUVDMzMzMzNFRUNDQ0NDQ0VFQzMzMzMzRUVDQ0NDQ0NFRUMzMzMzM0VFRERDQ0NDRUVEREMzMzNFRUREREREREVFAAAAAAAABUUiIiIiIiIlRWZmZmZmZmVFVVVVVVVVVUEREREREREREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA"
+    rel="icon" type="image/x-icon" />
+  <link rel="stylesheet" href="./assets/styles.css">
+  <script src="./assets/index.js" type="module"></script>
+  <title>Calendar App</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root">
+    <div class='App'>
+      <div class='heading'>
+        Work Area
+      </div>
+      <div class="calendar" id="calendar_content">
+      </div>
+      <form class='person_data_form' id="dataUpdateForm">
+        <div class="left_text_area">
+          <textarea class='edit_persons' name='personData' id='personDataEdit' required></textarea>
+        </div>
+        <div class='right_area'>
+          <label>Year</label>
+          <input type='number' name='year' id='year' min='1' max='9999' required />
+          <button type='submit' class='update_button'>UPDATE</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

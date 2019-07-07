@@ -1,0 +1,184 @@
+:root {
+  --base-color: #eaf0f2;
+  --primary-color: #717679;
+  --day-title-color: #aba0ec;
+  --day-background-color: #dee4e6;
+  --box-height: 250px;
+  --box-width: 200px;
+  --title-height: calc(var(--box-height) - var(--box-width));
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  background-color: var(--base-color);
+  min-height: 100vh;
+  padding: 0 5%;
+}
+
+.heading {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-align: center;
+  padding: 5% 0;
+}
+
+ /* calendar content - colllection of days in the week */
+.calendar {
+  min-height: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 3%;
+}
+
+/* individual day card */
+.dayBox {
+  width: var(--box-width);
+  height: var(--box-height);
+  margin-bottom: 1em;
+  flex: 0 0 auto;
+  background-color: white;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+}
+
+.dayBox .title {
+  height: var(--title-height);
+  background-color: var(--day-title-color);
+  text-align: right;
+  vertical-align: middle;
+  line-height: var(--title-height);
+  color: white;
+  padding-right: 8%;
+}
+
+.dayBox ul {
+  padding: 0;
+  margin: 0;
+  height: calc(100% - var(--title-height));
+  border: 2px solid #c8cdce;
+  box-sizing: border-box;
+  border-top-width: 0px;
+  overflow: scroll;
+}
+
+.dayBox ul li {
+  list-style: none;
+  height: 100%;
+  width: 100%;
+  background-color: aliceblue;
+  color: white;
+  font-weight: bold;
+  display: -ms-flexbox;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-box-pack: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 1px 1px 3px #717b7b;
+}
+
+/* empty day class */
+.day--empty {
+  background-image: url(./empty.svg);
+  background-color: var(--day-background-color);
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: center;
+}
+
+/* Bottom form containing text area, year input and button */
+.person_data_form {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+}
+
+.person_data_form .left_text_area {
+  display: inline-block;
+  width: 60%;
+  padding-right: 2%;
+}
+
+.person_data_form .left_text_area textarea {
+  width: 100%;
+  height: 40vh;
+  font-size: 1em;
+}
+
+.person_data_form .right_area {
+  width: 37%;
+  float: right;
+}
+
+.person_data_form .right_area label {
+  display: block;
+  color: var(--primary-color);
+  font-size: 1.25em;
+  font-weight: 500;
+}
+.person_data_form .right_area input {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  width: 60%;
+  font-size: 1.25em;
+}
+
+.person_data_form .right_area .update_button {
+  color: white;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  padding: 15px 50px;
+  font-size: 1.25em;
+  background-color: #1d8df3;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.error {
+  outline: 1px solid red;
+}
+
+@media only screen and (max-width: 768px) {
+  .calendar {
+    flex-flow: row nowrap;
+    overflow: scroll;
+  }
+
+  .dayBox {
+    margin: auto 10% 5% 0;
+  }
+
+  .person_data_form .left_text_area {
+    width: 98%;
+  }
+
+  .person_data_form .right_area {
+    width: 100%;
+    margin-top: 10%;
+    text-align: center;
+  }
+
+  .person_data_form .right_area input{
+    width: 90%;
+    text-align: center;
+  }
+}

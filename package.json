@@ -1,0 +1,27 @@
+{
+  "name": "calendar",
+  "version": "1.0.0",
+  "description": "A calendar app for viewing the birthdays in particular year on day basis",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riteshmukim/calendar-app-pure-js.git"
+  },
+  "keywords": [
+    "calendar",
+    "birthdays",
+    "weekly"
+  ],
+  "author": "Ritesh Mukim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/riteshmukim/calendar-app-pure-js/issues"
+  },
+  "homepage": "https://github.com/riteshmukim/calendar-app-pure-js#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
